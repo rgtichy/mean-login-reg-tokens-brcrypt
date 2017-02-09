@@ -1,0 +1,22 @@
+{
+  "name": "Login-Registration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "RGTichy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "body-parser": "latest",
+    "mongoose" : "latest",
+    "bcrypt" : "latest",
+    "express-session" : "latest",
+    "node-datetime" : "latest",
+    "dotenv" : "latest",
+    "jsonwebtoken": "^7.2.1"
+  }
+}

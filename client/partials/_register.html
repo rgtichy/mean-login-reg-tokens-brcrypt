@@ -1,0 +1,34 @@
+<h3>Register</h3>
+<div>
+  <form name="register" ng-submit="reg()">
+    <div class='row'>
+      <label class="form-group col-md-1 text-right">First Name:</label>
+      <input class="col-md-2" tabindex=1 type='text' placeholder='First Name' name='firstName' ng-model="user.firstName" ng-minlength=3 ng-maxlength=20 required/>
+      <label class="form-group col-md-1 text-right">e-Mail:</label>
+      <input class="col-md-3" tabindex=4 type='email' placeholder='e-mail' name='email' ng-model="user.email" ng-minlength=8 ng-maxlength=50 required/>
+    </div>
+    <div class='row'>
+      <label class="form-group col-md-1 text-right">Last Name:</label>
+      <input class="col-md-2" tabindex=2 type='text' placeholder='Last Name' name='lastName' ng-model="user.lastName" ng-minlength=2 ng-maxlength=20 required/>
+      <label class="form-group col-md-2 text-right">Password:</label>
+      <input class="col-md-2" tabindex=5 type='password' placeholder='Password' name='pwd' ng-model="user.password" ng-minlength=8 ng-maxlength=250 required/>
+    </div>
+    <div class='row'>
+      <label class="form-group col-md-1 text-right">Birthdate</label>
+      <input class="col-md-2" tabindex=3 type='date' placeholder='birthdate' name='birthdate' ng-model="user.birthDate" required/>
+      <label class="form-group col-md-2 text-right">Confirm Password:</label>
+      <input class="col-md-2" tabindex=6 type='password' placeholder='Confirm Password' name='pwd2' ng-model="user.password2" ng-minlength=8 ng-maxlength=250 required/>
+      <button tabindex=7 class="btn col-md-offset-1 col-md-1 btn-success" type='submit'>Register</button>
+      <a href="#!/login" class="btn col-md-1 btn-primary" >Go to Login</a>
+    </div>
+    <div ng-messages="register.firstName.$error" style="color:maroon" role="alert">
+      <div ng-message="required">You did not enter a first name.</div>
+      <div ng-message="minlength">Your first name is too short. (min: 3 characters)</div>
+      <div ng-message="maxlength">Your first name is too long.</div>
+    <div ng-messages="register.lastName.$error" style="color:maroon" role="alert">
+      <div ng-message="required">You did not enter a last name.</div>
+      <div ng-message="minlength">Your last name is too short</div>
+      <div ng-message="maxlength">Your last name is too long</div>
+  </div>
+  </form>
+</div>

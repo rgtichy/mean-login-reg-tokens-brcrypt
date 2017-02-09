@@ -1,0 +1,15 @@
+<h3>Login!</h3>
+<div id='login'>
+  <form ng-submit="login()">
+    <div class='row'>
+      <label class="form-group col-md-1 text-right">Login/email:</label>
+      <input class="col-md-2" type='text' placeholder='e-mail' name='user' ng-model="user.email"/>
+      <label class="form-group col-md-1 text-right">Password:</label>
+      <input class="col-md-2" type='password' placeholder='Password' name='pwd' ng-model="user.password" />
+    </div>
+    <div class='row'>
+      <button class='col-md-offset-5 col-md-1 btn btn-success' type='submit'>Login</button>
+      <a class='col-md-offset-1 col-md-1 btn btn-primary' href="#!/register">Register</a>
+    </div>
+  </form>
+</div>
