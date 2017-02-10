@@ -9,7 +9,7 @@ module.exports = {
   },
   register: function(request,response){
     console.log("create")
-    // console.log(request.body)
+    console.log(request.body)
     User.findOne({'email':request.body.email}).exec()
     .then(function(result){
       if (result){
@@ -28,7 +28,7 @@ module.exports = {
         newUser.lastName = request.body.lastName;
         newUser.email = request.body.email;
         newUser.password = bcrypt.hashSync(request.body.password, bcrypt.genSaltSync(8))
-        newUser.birthDate = Date(request.body.birthDate);
+        newUser.birthDate = request.body.birthDate;
         // console.log(newUser)
         newUser.save(function(err,newUser){
           if (err){

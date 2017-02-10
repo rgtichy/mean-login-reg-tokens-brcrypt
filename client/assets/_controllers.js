@@ -22,6 +22,7 @@ angular.module("loginApp").controller("registerController", ["$scope", "$routePa
   function( $scope, $routeParams, $location, $route, userFactory, UserService ){
     console.log("rC loaded")
     $scope.reg = function(){
+      console.log($scope.user)
       UserService.register($scope.user)
       .then(function(res){
         if (res.data.success){
